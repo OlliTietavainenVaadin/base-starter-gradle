@@ -37,6 +37,7 @@ dependencies {
 
     // Vaadin
     implementation("com.vaadin:vaadin-core")
+    implementation("com.vaadin:vaadin-classic-components-flow")
 
     // logging
     // currently we are logging through the SLF4J API to SLF4J-Simple. See src/main/resources/simplelogger.properties file for the logger configuration

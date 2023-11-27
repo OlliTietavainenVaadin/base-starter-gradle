@@ -1,9 +1,11 @@
 package com.vaadin.starter.skeleton;
 
 import com.vaadin.flow.component.Key;
+import com.vaadin.classic.v8.ui.GridLayout;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.html.Paragraph;
+import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
@@ -35,5 +37,13 @@ public class MainView extends VerticalLayout {
         addClassName("centered-content");
 
         add(textField, button);
+        GridLayout gridLayout = new GridLayout(2, 2);
+        gridLayout.addComponent(new Span("foo"), 0, 0);
+        gridLayout.addComponent(new Span("bar"), 1, 0);
+        gridLayout.addComponent(new Span("baz"), 0, 1);
+        gridLayout.addComponent(new Span("quux"), 1, 1);
+
+        add(gridLayout);
+
     }
 }
